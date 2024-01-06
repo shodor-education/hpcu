@@ -1,0 +1,19 @@
+collections_dir: "collections"
+collections:
+  resources:
+    output: true
+defaults:
+  - scope:
+      type: "resources"
+    values:
+      layout: "resource"
+exclude:
+  - "exclude"
+# During dev, uncomment dirs below you don't need to generate — speeds up build
+#  - "_resources"
+plugins:
+  - "jekyll-redirect-from"
+sass:
+  style: "compressed"
+whitelist:
+  - "jekyll-redirect-from"
