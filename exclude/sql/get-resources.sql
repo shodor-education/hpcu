@@ -2,7 +2,7 @@ SET SESSION group_concat_max_len = 1000000;
 SELECT CONCAT(
   'FILENAME::',
   fields.`cserdId`,
-  '.html\n---\n',
+  '\n---\n',
   GROUP_CONCAT(
     CONCAT(
       LOWER(REPLACE(fields.`name`, '_', '-')),
@@ -22,7 +22,11 @@ FROM (
       GROUP_CONCAT(
         CONCAT(
           '"',
-          COALESCE(SDRTextValue.`entry`, SDRDateValue.`entry`),
+          REPLACE(
+            COALESCE(SDRTextValue.`entry`, SDRDateValue.`entry`),
+            '"',
+            '\\"'
+          ),
           '"'
         )
         ORDER BY COALESCE(SDRTextValue.`entry`, SDRDateValue.`entry`)
