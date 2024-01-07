@@ -1,0 +1,517 @@
+"Computer Systems Organization":
+  "Architectures, Devices, Hardware":
+    "Accelerators":
+      "Many-Core Accelerators": null
+    "Clouds": null
+    "Clusters": null
+    "Computers": null
+    "Cores": null
+    "Grids":
+      "Data Grids": null
+    "Instruments": null
+    "Memory":
+      "Cache": null
+      "Memory Access Patterns": null
+      "Memory Models and Address Space":
+        "Distributed Memory": null
+        "Partitioned Global Address Space (PGAS)": null
+        "Shared Memory": null
+    "Nodes": null
+    "Parallel Architecture": null
+    "Processors":
+      "CPU": null
+      "Multi-Core Processors": null
+      "Streaming Processors": null
+      "Vector Processors": null
+    "Storage": null
+    "Supercomputers": null
+  "Communication":
+    "Communicators": null
+    "Computation and Communication Overlapping": null
+    "Networks":
+      "Network Topologies": null
+    "Protocols": null
+  "Computing Categories":
+    "Cloud Computing": null
+    "High Performance Computing":
+      "High End Computing": null
+      "Leadership Level Computing": null
+      "Supercomputing": null
+    "High Throughput Computing":
+      "Grid Computing": null
+    "Scientific Computing": null
+  "Data, Input/Output":
+    "Data Analysis":
+      "Data Mining": null
+    "Data Dependency": null
+    "Data Distribution":
+      "Blocked Partitioning": null
+      "Cyclic Partitioning": null
+      "Graph Partitioning": null
+    "Data Format, Representation, or Model": null
+    "Data Intensive Computing": null
+    "Data Locality": null
+    "Data Management":
+      "Archival":
+        "Persistent Archives": null
+      "Compression": null
+      "Data Transfers":
+        "Parallel Data Transfers": null
+      "Decompression": null
+      "Files and File Systems":
+        "File Format": null
+        "Parallel File System": null
+      "Parallel I/O": null
+      "Preservation": null
+    "Data Parallelism": null
+    "Data Processing": null
+    "Data Types":
+      "Mixed Data Types": null
+      "Scalar": null
+      "Tensor": null
+      "Vector": null
+    "Databases": null
+    "Datasets": null
+    "Digital Library":
+      "Data Collection": null
+    "Metadata": null
+    "Observational Data": null
+    "Paradata": null
+  "Execution, Workload":
+    "Events":
+      "Attacks": null
+      "Failures":
+        "Fault Tolerance": null
+        "Mean Time Between Failures (MTBF)": null
+        "Program Failures": null
+        "Starvation": null
+        "Time-Out": null
+    "Flow":
+      "Concurrency, Concurrent":
+        "Multi-Core Computing":
+          "Many-Core Computing": null
+        "Parallel, Parallelism":
+          "Functional Parallelism": null
+          "Multiple-Instruction-Multiple-Data (MIMD)": null
+          "Parallel Computing": null
+          "Single-Instruction-Multiple-Data (SIMD)": null
+          "Single-Program-Multiple-Data (SPMD)": null
+          "Task-Level Parallelism": null
+        "Serial Fraction": null
+        "Synchronization":
+          "Critical Section": null
+          "Deadlock": null
+          "Mutual Exclusion": null
+          "Race Condition": null
+          "Synchronization Mechanisms": null
+      "Serial, Sequential": null
+    "Hierarchy":
+      "Jobs": null
+      "Pathways": null
+      "Process": null
+      "Tasks": null
+      "Threads": null
+      "Workflows":
+        "Workflow Tools": null
+    "Roles":
+      "Clients": null
+      "Service":
+        "Web Service": null
+  "Software":
+    "Code":
+      "Computer Program":
+        "Parallel Program": null
+        "Serial Program": null
+      "Parallel Code": null
+      "Pseudo Code": null
+      "Sample Code": null
+      "Source Code":
+        "Header File": null
+        "Source Code Formatting": null
+        "Source Control": null
+    "Software Categories":
+      "Applications": null
+      "Libraries": null
+      "Middleware": null
+      "Modeling Software": null
+      "Operating System": null
+      "Portals": null
+      "Software Environment":
+        "Development Environment": null
+        "Spreadsheets": null
+      "Tools": null
+      "User Interfaces": null
+    "Software Development Stages, Lifecycle":
+      "Building": null
+      "Compiling (and Compilers)":
+        "Compiler Optimization": null
+      "Debugging":
+        "Debuggers, Debugging Tools":
+          "Parallel Debuggers": null
+        "Debugging Strategies, Rules of Thumb": null
+        "Runtime Errors": null
+        "Symbolic Debugging": null
+      "Documentation": null
+      "Implementation": null
+      "Linking": null
+      "Performance Analysis, Profiling, Profilers": null
+      "Programming":
+        "Concurrent, Parallel, or Distributed Programming":
+          "Message Passing": null
+          "Multithreading": null
+          "Parallelization":
+            "Loop Level Parallelization": null
+          "Streaming": null
+          "Vectorization": null
+        "Programming Languages":
+          "Compiled Languages": null
+          "Interpreted Languages": null
+          "Language Constructs and Features":
+            "Arguments, Parameters":
+              "Pass by Reference": null
+              "Pass by Value": null
+            "Classes and objects": null
+            "Inheritance": null
+            "Modules, Packages": null
+            "Patterns": null
+            "Polymorphism": null
+            "Procedures, Functions and Subroutines": null
+            "Recursion": null
+            "Structures":
+              "Types": null
+              "Variables": null
+          "Programming Techniques": null
+          "Symbolic Languages": null
+        "Scripting": null
+        "Sequential Programming": null
+      "Software Design":
+        "Boss-Worker": null
+        "Code Re-use, Legacy Code": null
+        "Flow-Chart": null
+        "Functional Decomposition": null
+        "Modularization": null
+        "Object-Oriented Programming": null
+        "Top-Down": null
+      "Software Engineering": null
+      "Software Requirements": null
+      "Testing":
+        "Regression Testing": null
+        "Testing Frameworks": null
+        "Unit Testing": null
+      "Verification and Validation":
+        "Statistical Comparison": null
+"General Concepts":
+  "Attributes":
+    "Accuracy and Precision": null
+    "Efficiency": null
+    "Granularity": null
+    "Identity": null
+    "Integrity": null
+    "Performance":
+      "Amdahl's Law": null
+      "Benchmark": null
+      "Hotspots": null
+      "Metrics": null
+      "Speedup": null
+      "Tuning": null
+    "Provenance": null
+    "Reliability": null
+    "Robustness": null
+    "Scale":
+      "Large Scale": null
+      "Scalability":
+        "Strong Scalability": null
+        "Weak Scalability": null
+    "Security": null
+  "Complexity": null
+  "Design": null
+  "Information": null
+  "Knowledge": null
+  "Methodologies":
+    "Algorithms": null
+    "Best Practices": null
+    "Checkpointing": null
+    "Experimentation": null
+    "Optimization":
+      "Constrained Optimization Methods": null
+      "Linear Programming Methods": null
+      "Non-Linear Programming Methods": null
+      "Unconstrained Optimization Methods":
+        "Genetic Algorithms": null
+        "Simulated Annealing": null
+        "Steepest Descent": null
+    "Problem Solving": null
+    "Resource Management":
+      "Load Balancing":
+        "Dynamic Load Balancing": null
+        "Load Balance": null
+        "Load Imbalance": null
+        "Static Load Balancing": null
+      "Placement": null
+      "Provisioning": null
+      "Resource Allocation": null
+      "Scheduling": null
+    "Scaling": null
+    "Simulation and Modeling":
+      "Conceptual Model": null
+      "Data Fitting": null
+      "Discrete and Difference-Based Computer Models": null
+      "Event-Based Modeling": null
+      "Iterative Process": null
+      "Model Algebraic Equations": null
+      "Model Quality": null
+      "Model Validation": null
+      "Prediction": null
+      "Tabular and Visual Outputs": null
+      "Virtual World": null
+    "Virtualization": null
+    "Visualization and Scientific Visualization":
+      "Camera": null
+      "Graphic Concepts":
+        "2D Screen": null
+        "3D Coordinate Systems": null
+        "Classification/Segmentation": null
+        "Color Spaces and Colormaps": null
+        "Continuous": null
+        "Discrete": null
+        "Lighting/Shading": null
+        "Pixels": null
+        "Polygonal Representation": null
+        "Relationships to Perception": null
+        "Transfer Functions": null
+      "Graphic Libraries": null
+      "Grid Representations of Data":
+        "Cell Representations":
+          "3D Geometries": null
+          "Points": null
+          "Polygons": null
+        "Grid Limitations": null
+        "Grid-Layout or Grid Types":
+          "Random Grid": null
+          "Structured Grid":
+            "Cylindrical Grid": null
+            "Irregular Grid": null
+            "Regular Grid": null
+            "Spherical Grid": null
+          "Unstructured Grid": null
+      "Human Visualization System":
+        "Capabilities and Perceptions": null
+      "Image Manipulation Algorithms":
+        "Distortion": null
+        "Enhancement": null
+        "Frequency Domains": null
+        "Restoration": null
+      "Navigation in Virtual Space and Manipulation of Primitive Objects":
+        "Scale, Rotation, and Translation Transformations": null
+      "Rendering":
+        "Surface Rendering": null
+        "Volumetric Rendering": null
+      "Scalar Field Visualization": null
+      "Scientific Visualization": null
+      "Tensor Field Visualization": null
+      "Vector Field Visualization":
+        "Particles": null
+        "Stream Ribbons": null
+        "Vector Glyphs": null
+      "Visualization Techniques":
+        "Glyphs": null
+        "Image Processing":
+          "Feature Extraction": null
+          "Image Enhancement": null
+          "Noise Reduction": null
+        "Iso-Contours": null
+        "Iso-Surfaces": null
+        "Raycasting": null
+        "Streamlines": null
+        "Texture Mapping": null
+        "Volume-data": null
+  "Physical World": null
+  "Policies": null
+  "Randomicity":
+    "Random Numbers and Random Number Generators": null
+  "Sources of Errors":
+    "Bugs and Programming Mistakes":
+      "Memory Problems":
+        "Array Overruns": null
+        "Invalid Pointers": null
+        "Mismatched Parameters": null
+    "Data Corruption and Data Integrity": null
+    "Data Dependent Errors": null
+    "Error Propagation": null
+    "Experimental Errors": null
+    "Numerical Errors":
+      "Absolute Error": null
+      "Chopping": null
+      "Conditioning and Ill-Conditioning": null
+      "Correctness": null
+      "Overflow": null
+      "Relative Error": null
+      "Round-off": null
+      "Sensitivity": null
+      "Significance Loss": null
+      "Underflow": null
+    "Systematic Errors": null
+  "Systems":
+    "Complex Systems": null
+"Subject Areas":
+  "Agriculture": null
+  "Architecture": null
+  "Artificial Life": null
+  "Cognitive Science": null
+  "Disabilities": null
+  "Ecology":
+    "Ecosystem Science": null
+  "Education":
+    "General Education": null
+  "Forensics": null
+  "Humanities":
+    "Anthropology": null
+    "Human History": null
+    "Literature": null
+    "Philosophy": null
+    "Visual and Performing Arts": null
+  "Life Sciences and Bioinformatics":
+    "Animals, Insects, and Pets": null
+    "Biology": null
+    "Bioscience": null
+    "Health": null
+    "Medicine": null
+    "Paleontology": null
+  "Mathematics":
+    "Calculus": null
+    "Equations":
+      "Differential Equations and Discrete Dynamic Systems":
+        "Coefficients": null
+        "Equilibrium Point": null
+        "First Order Equations": null
+        "Higher Order Equations": null
+        "Laplace Transforms": null
+        "Long-Term Behavior": null
+        "Non-linear Differential Equations":
+          "Bifurcation Theory":
+            "Chaos": null
+            "Periodic Points": null
+          "Henon Maps": null
+          "Linearization": null
+          "Logistic Maps": null
+          "Phase Portrait Analysis": null
+        "Partial Differential Equations (PDEs)":
+          "Elliptic PDEs": null
+          "Hyperbolic PDEs": null
+          "Parabolic PDEs": null
+        "Solution Methodology":
+          "Exact": null
+          "Homogeneous": null
+          "Linear": null
+          "Non-Homogeneous": null
+      "Linear Equations":
+        "Iterative Methods":
+          "Convergence and Stopping Criteria": null
+        "Naive Gauss Elimination": null
+        "Partial Pivoting": null
+      "Non-Linear Equations": null
+    "Geometry": null
+    "Hypothesis Testing": null
+    "Mathematical Methods":
+      "Exterior Method": null
+      "Interior Method": null
+      "Inverse Power Method": null
+      "Mixed Method": null
+      "Numerical Methods and Algorithms":
+        "Factorization Methods": null
+        "Fast Fourier Transforms (FFTs)": null
+        "Fixed Points Methods":
+          "Bisection": null
+          "Newton's": null
+          "Secant": null
+        "Interpolation and Approximation Methods":
+          "Approximation Method of Least Squares": null
+          "Interpolation with Spline Functions": null
+        "Numerical Methods for Ordinary Differential Equations":
+          "Boundary Value Problems (BVPs)": null
+          "Initial Value Problems (IVPs)": null
+          "Multistep Methods": null
+          "Predictor-corrector Methods": null
+        "Numerical Methods for Partial Differential Equations":
+          "Finite Difference Method": null
+          "Finite Element Method": null
+      "Power Method": null
+      "Shooting Method": null
+      "Simplex Method": null
+      "Transformation Method": null
+    "Mathematical Representations of Functions":
+      "Convolution Functions": null
+      "Delta Functions": null
+      "Linear Functions": null
+      "Non-Linear Functions":
+        "Exponential Functions": null
+        "Parameterized Functions": null
+        "Periodic Functions": null
+        "Polynomials": null
+      "Spline Functions":
+        "Natural Cubic": null
+        "Piecewise Linear": null
+        "Quadratic": null
+    "Numerical Concepts":
+      "Monte Carlo": null
+      "Numerical Libraries": null
+      "Numerical Representation":
+        "Matrices":
+          "Canonical Forms": null
+          "Eigenvalues and Eigenvectors": null
+        "Number Representation":
+          "Arithmetic": null
+          "Floating Point":
+            "Precision":
+              "Double": null
+              "Single": null
+          "Integer": null
+          "Numerical Range": null
+  "Neuroscience": null
+  "Physical Science and Engineering":
+    "Astronomy": null
+    "Aviation and Aeronautics": null
+    "Chemistry":
+      "Biochemistry": null
+    "Computational Science": null
+    "Computer Science": null
+    "Cosmology": null
+    "Earth Sciences or Geosciences":
+      "Atmospheric Science": null
+      "Coastal Science": null
+      "Geography": null
+      "Geology and Geophysics": null
+      "Hydrology": null
+      "Meteorology": null
+      "Oceanography": null
+    "Energy": null
+    "Engineering":
+      "Aerospace Engineering": null
+      "Architectural Engineering": null
+      "Biomedical Engineering": null
+      "Chemical Engineering": null
+      "Civil Engineering": null
+      "Computer Engineering": null
+      "Electrical Engineering": null
+      "Industrial Engineering": null
+      "Materials Engineering": null
+      "Mechanical Engineering": null
+      "Naval Engineering": null
+      "Nuclear Engineering": null
+      "Petroleum Engineering": null
+      "Systems Engineering": null
+    "Information Technology": null
+    "Manufacturing": null
+    "Material Science": null
+    "Nanotechnology": null
+    "Physics":
+      "Acoustics": null
+      "High Energy Physics": null
+      "Modern Physics": null
+    "Space": null
+  "Psychology": null
+  "Science and Technology Policy": null
+  "Social Science":
+    "Anthropology and Archaeology": null
+    "Economics": null
+    "Government": null
