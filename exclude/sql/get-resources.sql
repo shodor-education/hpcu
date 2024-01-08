@@ -28,7 +28,28 @@ FROM (
     SDRVersion.`cserdId`,
     SDRField.`name`,
     CONCAT(
-      IF(COUNT(*) > 1, '\n  - ', ' '),
+      IF(
+        SDRField.`name` IN (
+          'Creator',
+          'Contributor',
+          'Publisher',
+          'Type',
+          'Subject',
+          'Format',
+          'HPCU_Subject',
+          'HPCU_Subject_2',
+          'HPCU_Keywords',
+          'Location',
+          'Language',
+          'Audience',
+          'Education_Level',
+          'Keyword',
+          'Sector',
+          'Difficulty'
+        ),
+        '\n  - ',
+        ' '
+      ),
       GROUP_CONCAT(
         CONCAT(
           '"',
