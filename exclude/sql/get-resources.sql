@@ -5,7 +5,17 @@ SELECT CONCAT(
   '\n---\n',
   GROUP_CONCAT(
     CONCAT(
-      LOWER(REPLACE(fields.`name`, '_', '-')),
+      LOWER(
+        REPLACE(
+          REPLACE(
+            fields.`name`,
+            '_',
+            '-'
+          ),
+          'Url',
+          'resource-url'
+        )
+      ),
       ':',
       fields.`values_`
     )

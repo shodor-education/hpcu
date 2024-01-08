@@ -1,0 +1,14 @@
+#results-section {
+  .resource {
+    padding: 10px;
+  
+    &:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+  
+    h2 {
+      font-size: 14pt;
+      margin: 0;
+    }
+  }
+}
