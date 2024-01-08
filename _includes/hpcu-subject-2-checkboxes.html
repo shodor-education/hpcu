@@ -1,17 +1,25 @@
-<ul>
+<ul class="hpcu-subject-2-checkboxes">
 {% for subject in include.subjects %}
   <li>
-    <input
-      type="checkbox"
-      id="hpcu-subject-2-option-{{ subject[0] | slugify }}"
-    />
-    <label
-      for="hpcu-subject-2-option-{{ subject[0] | slugify }}"
-    >
-      {{ subject[0] }}
-    </label>
-    {% assign subjects = subject[1] %}
-    {% include hpcu-subject-2-checkboxes.html subjects=subjects %}
+    {% if subject[1] != null %}
+      <details>
+        <summary>
+    {% endif %}
+          <input
+            type="checkbox"
+            id="hpcu-subject-2-option-{{ subject[0] | slugify }}"
+          />
+          <label
+            for="hpcu-subject-2-option-{{ subject[0] | slugify }}"
+          >
+            {{ subject[0] }}
+          </label>
+    {% if subject[1] != null %}
+        </summary>
+        {% assign subjects = subject[1] %}
+        {% include hpcu-subject-2-checkboxes.html subjects=subjects %}
+      </details>
+    {% endif %}
   </li>
 {% endfor %}
 </ul>
