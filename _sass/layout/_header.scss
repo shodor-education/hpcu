@@ -1,0 +1,12 @@
+header {
+  background-color: white;
+  display: block;
+  margin: 0 auto;
+  width: $page-width;
+
+  #header-logo {
+    display: block;
+    margin: 0 5px;
+    width: 100%;
+  }
+}

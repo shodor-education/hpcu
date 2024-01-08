@@ -1,0 +1,19 @@
+footer {
+  background-color: white;
+  display: block;
+  font-size: 11pt;
+  margin: 0 auto;
+  width: $page-width;
+
+  & > div {
+    align-items: center;
+    display: flex;
+
+    & > span {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      padding-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HPC University: {{ page.title }}</title>
+    <link rel="icon" type="image/ico" href="{{ '/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'css/main.css' | relative_url }}">
+    <script src="{{ 'js/main.js' | relative_url }}"></script>
+  </head>
+  <body>
+    <header>
+      <a id="header-logo" href="{{ site.url }}{{ site.baseurl }}"><img
+          src="{{ '/img/header-logo.png' | relative_url }}"
+          alt="HPC University logo"/></a>
+    </header>
+    <main>
+      <div>
+        {{ content }}
+      </div>
+    </main>
+    <footer>
+      <div>
+        <span id="footer-copyright">
+          <a href="http://www.shodor.org" target="_blank">&copy;
+            1994&ndash;{{ "now" | date: "%Y" }} Shodor</a>
+        </span>
+        <span>
+          <a href="https://oercommons.org/hubs/NSDL" target="_blank">NSDL</a>
+        </span>
+        <span>
+          <a href="https://www.xsede.org/" target="_blank">XSEDE</a>
+        </span>
+        <span>
+          <a href="https://bluewaters.ncsa.illinois.edu/" target="_blank">Blue Waters</a>
+        </span>
+        <span>
+          <a href="http://www.sighpc.org/" target="_blank">ACM SIGHPC</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

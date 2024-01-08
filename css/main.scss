@@ -1,0 +1,20 @@
+---
+---
+a,
+a:link,                                                                   
+a:visited {                                                               
+  color: #3b487a;                                                 
+}
+
+%body-font {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+}
+
+$page-width: 900px;
+
+@import 'base';
+@import 'layout/body';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';

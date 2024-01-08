@@ -1,0 +1,10 @@
+main {
+  background-color: white;
+  padding: 5px;
+  margin: 0 auto;
+  width: $page-width - 10px;
+
+  & > div {
+    border: 1px solid #c0c0c0;
+  }
+}
