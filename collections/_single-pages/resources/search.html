@@ -1,19 +1,55 @@
 ---
 title: "Browse"
 ---
-{% include hpcu-subject-2-checkboxes.html subjects=site.data.hpcu-subject-2 %}
+<section class="filters-section">
+  {% include browse-filter.html
+    heading="Subject"
+    options=site.data.subjects
+  %}
+  {% include browse-filter.html
+    heading="Format"
+    options=site.data.formats
+  %}
+  {% include browse-filter.html
+    heading="HPCU Subject"
+    options=site.data.hpcu-subjects
+  %}
+</section>
+<section class="filters-section">
+  {% include browse-filter.html
+    heading="Language"
+    options=site.data.languages
+  %}
+  {% include browse-filter.html
+    heading="Audience"
+    options=site.data.audiences
+  %}
+  {% include browse-filter.html
+    heading="Sector"
+    options=site.data.sectors
+  %}
+</section>
+<section class="filters-section">
+  {% include browse-filter.html
+    heading="Difficulty"
+    options=site.data.difficulties
+  %}
+</section>
 <section id="results-section">
-  {% for resource in site.resources %}
-    <article class="resource">
-      <h2>
-        <a
-          href="{{ resource.resource-url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >{{ resource.title }}</a>
-      </h2>
-      <p>{{ resource.description }}</p>
-      <a href="{{ resource.url }}">Reviews and Metadata</a>
-    </article>
-  {% endfor %}
+  <h2 id="results-count">{{ site.resources | size | count }} results</h2>
+  <div id="results">
+    {% for resource in site.resources %}
+      <article class="resource">
+        <h3>
+          <a
+            href="{{ resource.resource-url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{{ resource.title }}</a>
+        </h3>
+        <p>{{ resource.description }}</p>
+        <a href="{{ resource.url }}">Reviews and Metadata</a>
+      </article>
+    {% endfor %}
+  </div>
 </section>

@@ -1,14 +1,45 @@
-#results-section {
-  .resource {
-    padding: 10px;
-  
-    &:nth-child(odd) {
-      background-color: #f0f0f0;
+.filters-section {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+
+  .filter {
+    flex: 1;
+
+    .options {
+      height: 92px;
+      margin-top: 10px;
+      overflow-y: scroll;
     }
-  
-    h2 {
-      font-size: 14pt;
-      margin: 0;
+  }
+}
+
+#results-section {
+  margin: 2px;
+
+  #results-count {
+    font-size: 14pt;
+    margin: 10px 0;
+    padding-left: 5px;
+  }
+
+  #results {
+    border: 1px solid gray;
+    height: 310px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+
+    .resource {
+      padding: 10px;
+
+      &:nth-child(odd) {
+        background-color: #f0f0f0;
+      }
+
+      h3 {
+        font-size: 14pt;
+        margin: 0;
+      }
     }
   }
 }
