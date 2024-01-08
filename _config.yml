@@ -2,11 +2,18 @@ collections_dir: "collections"
 collections:
   resources:
     output: true
+  single-pages:
+    output: true
+    permalink: "/:path/"
 defaults:
   - scope:
       type: "resources"
     values:
       layout: "resource"
+  - scope:
+      type: "single-pages"
+    values:
+      layout: "default"
 exclude:
   - "exclude"
 # During dev, uncomment dirs below you don't need to generate — speeds up build
