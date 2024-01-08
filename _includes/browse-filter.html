@@ -23,15 +23,16 @@
   </fieldset>
   <div class="options">
     {% for option in include.options %}
-    <input
-      type="checkbox"
-      id="{{ option }}-option"
-      name="{{ heading-slug }}-options"
-      value="{{ option }}"
-      onchange="selectBrowseOption();"
-    />
-    <label for="{{ option }}-option">{{ option }}</label>
-    <br/>
+    <div class="checkbox">
+      <input
+        type="checkbox"
+        id="{{ option }}-option"
+        name="{{ heading-slug }}-options"
+        value="{{ option }}"
+        onchange="selectBrowseOption();"
+      />
+      <label for="{{ option }}-option">{{ option }}</label>
+    </div>
     {% endfor %}
   </div>
 </fieldset>
