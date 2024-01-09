@@ -19,9 +19,23 @@
         margin-top: 10px;
         overflow-y: scroll;
 
+        .filter-tree {
+          list-style-type: none;
+          margin: 0;
+
+          details {
+            margin-left: -16px;
+
+            .indent {
+              text-indent: -42px;
+              padding-left: 40px;
+            }
+          }
+        }
+
         .checkbox {
-          display: flex;
           align-items: flex-start;
+          display: flex;
 
           label {
             padding-left: 5px;

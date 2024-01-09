@@ -22,17 +22,25 @@
     <label for="{{ heading-slug }}-and">AND</label>
   </fieldset>
   <div class="options">
-    {% for option in include.options %}
-    <div class="checkbox">
-      <input
-        type="checkbox"
-        id="{{ option }}-option"
-        name="{{ heading-slug }}-options"
-        value="{{ option }}"
-        onchange="selectBrowseOption();"
-      />
-      <label for="{{ option }}-option">{{ option }}</label>
-    </div>
-    {% endfor %}
+    {% if include.tree %}
+      {% include filter-tree.html
+        filter-key=heading-slug
+        filter-values=include.options
+      %}
+    {% else %}
+      {% for option in include.options %}
+        {% assign option-slug = option | slugify %}
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            id="{{ option-slug }}-option"
+            name="{{ heading-slug }}-options"
+            value="{{ option-slug }}"
+            onchange="selectBrowseOption();"
+          />
+          <label for="{{ option-slug }}-option">{{ option }}</label>
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
 </fieldset>

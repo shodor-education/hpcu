@@ -6,38 +6,55 @@ title: "Browse"
     <h2>Filters</h2>
     {% include browse-filter.html
       heading="Subject"
-      options=site.data.subjects
+      options=site.data.resource-filter-values.subject
     %}
     {% include browse-filter.html
       heading="Format"
-      options=site.data.formats
+      options=site.data.resource-filter-values.format
     %}
     {% include browse-filter.html
       heading="HPCU Subject"
-      options=site.data.hpcu-subjects
+      options=site.data.resource-filter-values.hpcu-subject
+    %}
+    {% include browse-filter.html
+      heading="HPCU Subject 2"
+      options=site.data.resource-filter-values.hpcu-subject-2
+      tree=true
     %}
     {% include browse-filter.html
       heading="Language"
-      options=site.data.languages
+      options=site.data.resource-filter-values.language
     %}
     {% include browse-filter.html
       heading="Audience"
-      options=site.data.audiences
+      options=site.data.resource-filter-values.audience
     %}
     {% include browse-filter.html
       heading="Sector"
-      options=site.data.sectors
+      options=site.data.resource-filter-values.sector
     %}
     {% include browse-filter.html
       heading="Difficulty"
-      options=site.data.difficulties
+      options=site.data.resource-filter-values.difficulty
     %}
   </section>
   <section id="results-section">
     <h2 id="results-count">{{ site.resources | size | count }} results</h2>
     <div id="results">
       {% for resource in site.resources %}
-        <article class="resource">
+        <article
+          class="resource"
+          {% for filter-values in site.data.resource-filter-values %}
+            {% assign key = filter-values[0] %}
+            data-{{ key }}="{%
+            for metadata in resource[key] %}{{
+              metadata | slugify }}{%
+              unless forloop.last
+                %},{%
+              endunless %}{%
+            endfor %}"
+          {% endfor %}
+        >
           <h3>
             <a
               href="{{ resource.resource-url }}"
