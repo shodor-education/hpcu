@@ -9,7 +9,6 @@
   }
 
   #filters-section {
-    flex: 1;
 
     .filter {
       margin: 10px 0 0 0;
@@ -22,13 +21,16 @@
         .filter-tree {
           list-style-type: none;
           margin: 0;
+          padding-left: 27.5px;
 
-          details {
-            margin-left: -16px;
+          li {
+            details {
+              margin-left: -16px;
 
-            .indent {
-              text-indent: -42px;
-              padding-left: 40px;
+              .indent {
+                text-indent: -42px;
+                padding-left: 40px;
+              }
             }
           }
         }
@@ -46,12 +48,11 @@
   }
 
   #results-section {
-    flex: 3;
     min-width: 0;
 
     #results {
       border: 1px solid gray;
-      height: 1401px;
+      height: 1606px;
       margin-bottom: 10px;
       margin-top: 18px;
       overflow-y: scroll;
