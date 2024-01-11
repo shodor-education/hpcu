@@ -17,15 +17,17 @@
       id="{{ heading-slug }}-and"
       name="{{ heading-slug }}-filter-type"
       value="AND"
-      onchange="{{ onchange }}"
+      onchange="selectBrowseOption();"
     />
     <label for="{{ heading-slug }}-and">AND</label>
   </fieldset>
   <div class="options">
+    {% capture checkbox-group-name %}{{ heading-slug }}-options{% endcapture %}
     {% if include.tree %}
       {% include browse-filter-tree.html
         filter-key=heading-slug
         filter-values=include.options
+        checkbox-group-name=checkbox-group-name
       %}
     {% else %}
       {% for option in include.options %}
@@ -34,7 +36,7 @@
           <input
             type="checkbox"
             id="{{ option-slug }}-option"
-            name="{{ heading-slug }}-options"
+            name="{{ checkbox-group-name }}"
             value="{{ option-slug }}"
             onchange="selectBrowseOption();"
           />

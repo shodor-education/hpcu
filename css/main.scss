@@ -13,6 +13,8 @@ a:visited {
 
 $page-width: 900px;
 
+$resource-background-color-odd: {{ site.resource-background-color-odd }};
+
 @import 'base';
 @import 'layout/body';
 @import 'layout/footer';

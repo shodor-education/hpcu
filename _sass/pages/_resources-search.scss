@@ -9,6 +9,8 @@
   }
 
   #filters-section {
+    width: 326px;
+
     .filter {
       margin: 10px 0 0 0;
 
@@ -47,6 +49,7 @@
   }
 
   #results-section {
+    flex-grow: 1;
     min-width: 0;
 
     #results {
@@ -61,7 +64,7 @@
         padding: 10px;
 
         &:nth-child(odd) {
-          background-color: #f0f0f0;
+          background-color: $resource-background-color-odd;
         }
 
         h3 {

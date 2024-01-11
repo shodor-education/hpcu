@@ -10,7 +10,13 @@
     {% else %}
       <div class="checkbox">
     {% endif %}
-          <input type="checkbox" id="{{ checkbox-id }}"/>
+          <input
+            type="checkbox"
+            id="{{ checkbox-id }}"
+            name="{{ include.checkbox-group-name }}"
+            value="{{ filter-value[0] | slugify }}"
+            onchange="selectBrowseOption();"
+          />
           <label for="{{ checkbox-id }}">{{ filter-value[0] }}</label>
     {% if filter-value[1] != null %}
         </summary>
@@ -18,6 +24,7 @@
         {% include browse-filter-tree.html
           filter-key=include.filter-key
           filter-values=filter-values
+          checkbox-group-name=include.checkbox-group-name
         %}
       </details>
     {% else %}

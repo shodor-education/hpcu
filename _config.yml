@@ -20,6 +20,7 @@ exclude:
 #  - "_resources"
 plugins:
   - "jekyll-redirect-from"
+resource-background-color-odd: "#f0f0f0"
 sass:
   style: "compressed"
 whitelist:
