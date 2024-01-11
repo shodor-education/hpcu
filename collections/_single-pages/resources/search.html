@@ -5,6 +5,11 @@ title: "Browse"
   <section id="filters-section">
     <h2>Filters</h2>
     {% include browse-filter.html
+      heading="Type"
+      options=site.data.resource-filter-values.type
+      tree=true
+    %}
+    {% include browse-filter.html
       heading="Subject"
       options=site.data.resource-filter-values.subject
     %}
@@ -22,12 +27,27 @@ title: "Browse"
       tree=true
     %}
     {% include browse-filter.html
+      heading="HPCU Keywords"
+      options=site.data.resource-filter-values.hpcu-keywords
+      tree=true
+    %}
+    {% include browse-filter.html
+      heading="Location"
+      options=site.data.resource-filter-values.location
+      tree=true
+    %}
+    {% include browse-filter.html
       heading="Language"
       options=site.data.resource-filter-values.language
     %}
     {% include browse-filter.html
       heading="Audience"
       options=site.data.resource-filter-values.audience
+    %}
+    {% include browse-filter.html
+      heading="Education Level"
+      options=site.data.resource-filter-values.education-level
+      tree=true
     %}
     {% include browse-filter.html
       heading="Sector"

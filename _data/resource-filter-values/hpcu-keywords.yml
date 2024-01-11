@@ -1,0 +1,92 @@
+"ADIOS": null
+"ARENA": null
+"big-O Notation": null
+"Binary Format": null
+"Blocking/non-Blocking Send/Receive Operations": null
+"Buffered Communication Mode": null
+"C": null
+"Chapel": null
+"Chebyshev": null
+"Cholesky": null
+"Collective Communication": null
+"Conjugate Gradient": null
+"Crank-Nicolson": null
+"CUDA": null
+"DDT": null
+"Eclipse":
+  "Eclipse Parallel Tools Platform (PTP)": null
+"Euler": null
+"EXCEL": null
+"Extend": null
+"FORTRAN":
+  "Co-Array FORTRAN": null
+"Fortress": null
+"Gauss Seidel": null
+"Genetic Algorithms": null
+"Global Arrays": null
+"Globus Online": null
+"Golden Section Search": null
+"gprof": null
+"GPUs": null
+"GridFTP": null
+"HDF": null
+"HDF5": null
+"HSV": null
+"Hybrid MPI OpenMP": null
+"IMSL": null
+"Inter Cluster Studio": null
+"IPM": null
+"iRODS": null
+"Jacobi": null
+"JAVA": null
+"Kepler": null
+"Lagrange": null
+"Lagrange Multiplier": null
+"LU": null
+"Maple": null
+"Marching Cubes": null
+"Mathematica": null
+"Matlab": null
+"Microsoft Visual Studio": null
+"MPI":
+  "VIrtual Technologies": null
+"MPI I/O": null
+"NAG": null
+"Newton's Method": null
+"One-sided": null
+"OpenCL": null
+"OpenMP":
+  "OpenMP Variables": null
+"Oprofile": null
+"Pegasus": null
+"Penalty Function Method": null
+"Perl": null
+"Petascale Computing": null
+"PGAS Affinity": null
+"PGAS Collective Operations": null
+"PGAS NonLocal Access": null
+"PGAS Owner Computes": null
+"PGAS Partitioned Global Memory": null
+"Point to Point Communication": null
+"Python": null
+"QR": null
+"QR Algorithm": null
+"Quasi-Newton Unconstrained Optimization Method": null
+"Ready Communication Mode": null
+"RGB": null
+"Runge-Kutta": null
+"SHMEM": null
+"Simulated Annealing": null
+"SIMULINK": null
+"Standard Communication Mode": null
+"Steepest Descent": null
+"SVD": null
+"Synchronous Communication Mode": null
+"TAU": null
+"Taylor": null
+"Text Format": null
+"Totalview": null
+"Unified Parallel C (UPC)": null
+"VisIt": null
+"X10": null
+"XML": null

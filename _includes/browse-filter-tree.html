@@ -1,4 +1,4 @@
-<ul class="filter-tree">
+<ul class="browse-filter-tree">
 {% for filter-value in include.filter-values %}
   {% capture checkbox-id %}{{
     include.filter-key }}-option-{{ filter-value[0] | slugify }}{%
@@ -6,16 +6,16 @@
   <li>
     {% if filter-value[1] != null %}
       <details open>
-        <summary class="indent">
+        <summary>
     {% else %}
-      <div class="indent">
+      <div class="checkbox">
     {% endif %}
           <input type="checkbox" id="{{ checkbox-id }}"/>
           <label for="{{ checkbox-id }}">{{ filter-value[0] }}</label>
     {% if filter-value[1] != null %}
         </summary>
         {% assign filter-values = filter-value[1] %}
-        {% include filter-tree.html
+        {% include browse-filter-tree.html
           filter-key=include.filter-key
           filter-values=filter-values
         %}

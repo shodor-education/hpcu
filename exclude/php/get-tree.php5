@@ -2,8 +2,10 @@
 header('Content-Type: text/plain');
 include_once('helpers.php5');
 
-function echoHpcuSubjects($parentId = null, $level) {
-  global $sdrDbConn;
+$fieldName = 'HPCU_Subject_2';
+
+function echoTree($parentId = null, $level) {
+  global $fieldName, $sdrDbConn;
   $indent = '';
   for ($i = 0; $i < $level; $i++) {
     $indent .= '  ';
@@ -14,7 +16,7 @@ function echoHpcuSubjects($parentId = null, $level) {
     FROM SDRFieldValue
     JOIN SDRField ON SDRField.`id` = SDRFieldValue.`fieldId`
     JOIN SDRTextValue ON SDRTextValue.`valueId` = SDRFieldValue.`valueId`
-    WHERE SDRField.`name` = 'HPCU_Subject_2'
+    WHERE SDRField.`name` = "$fieldName"
     AND SDRFieldValue.`parentValueId` $parent
     ORDER BY SDRTextValue.`entry`
 END;
@@ -28,9 +30,9 @@ END;
   echo "\n";
   while ($result = $results->fetch_assoc()) {
     echo "$indent\"$result[entry]\"";
-    echoHpcuSubjects($result['valueId'], $level + 1);
+    echoTree($result['valueId'], $level + 1);
   }
 }
 
-echoHpcuSubjects(null, 0);
+echoTree(null, 0);
 ?>
