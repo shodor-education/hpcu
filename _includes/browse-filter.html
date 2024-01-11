@@ -35,12 +35,14 @@
         <div class="checkbox">
           <input
             type="checkbox"
-            id="{{ option-slug }}-option"
+            id="{{ heading-slug }}-option-{{ option-slug }}"
             name="{{ checkbox-group-name }}"
             value="{{ option-slug }}"
             onchange="selectBrowseOption();"
           />
-          <label for="{{ option-slug }}-option">{{ option }}</label>
+          <label for="{{ heading-slug }}-option-{{ option-slug }}">
+            {{ option }}
+          </label>
         </div>
       {% endfor %}
     {% endif %}
