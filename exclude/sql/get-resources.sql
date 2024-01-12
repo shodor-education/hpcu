@@ -21,7 +21,9 @@ SELECT CONCAT(
     )
     SEPARATOR '\n'
   ),
-  '\n---'
+  '\nredirect_from: "/resources/',
+  fields.`cserdId`,
+  '/"\n---'
 )
 FROM (
   SELECT SDRResourceProject.`projectId`,
