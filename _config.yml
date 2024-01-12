@@ -2,6 +2,7 @@ collections_dir: "collections"
 collections:
   resources:
     output: true
+    permalink: "/resources/:path/view/"
   single-pages:
     output: true
     permalink: "/:path/"
@@ -16,11 +17,11 @@ defaults:
       layout: "default"
 exclude:
   - "exclude"
+gray: "#f0f0f0"
 # During dev, uncomment dirs below you don't need to generate — speeds up build
 #  - "_resources"
 plugins:
   - "jekyll-redirect-from"
-resource-background-color-odd: "#f0f0f0"
 sass:
   style: "compressed"
 whitelist:

@@ -13,11 +13,12 @@ a:visited {
 
 $page-width: 900px;
 
-$resource-background-color-odd: {{ site.resource-background-color-odd }};
+$gray: {{ site.gray }};
 
 @import 'base';
 @import 'layout/body';
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/main';
+@import 'pages/resource';
 @import 'pages/resources-search';

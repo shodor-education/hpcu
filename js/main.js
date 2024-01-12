@@ -58,7 +58,7 @@ function selectBrowseOption() {
   for (let i = 0; i < selectedResources.length; i++) {
     selectedResources[i].style.backgroundColor = (
       i % 2 == 0
-      ? "{{ site.resource-background-color-odd }}"
+      ? "{{ site.gray }}"
       : "white"
     );
   }

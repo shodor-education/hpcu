@@ -1,3 +1,29 @@
 ---
 layout: "default"
 ---
+<nav>
+  <a href="{{ '/resources/search/' | relative_url }}">Browse Resources</a>
+</nav>
+<table id="resource-table">
+  {% for field in site.data.resource-fields %}
+    {% assign slugified-field = field | slugify %}
+    <tr>
+      <th>{{ field }}</th>
+      <td>
+        {% if page[slugified-field] %}
+          {% if slugified-field == 'resource-url' %}
+            <a
+              href="{{ page.resource-url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >{{ page.resource-url }}</a>
+          {% else %}
+            {{ page[slugified-field] | join: ', ' }}
+          {% endif %}
+        {% else %}
+          <div class="none">None listed</div>
+        {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+</table>
