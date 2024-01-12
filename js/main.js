@@ -70,5 +70,6 @@ function setAllCheckboxes(checkboxGroupName, checked) {
     );
     for (let i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = checked;
+        checkboxes[i].onchange();
     }
 }
