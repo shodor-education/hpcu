@@ -1,3 +1,4 @@
+baseurl: "/hpcu"
 collections_dir: "collections"
 collections:
   resources:
