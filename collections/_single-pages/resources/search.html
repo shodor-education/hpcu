@@ -84,7 +84,7 @@ redirect_from: "/resources/"
             >{{ resource.title }}</a>
           </h3>
           <p>{{ resource.description }}</p>
-          <a href="{{ resource.url }}">Reviews and Metadata</a>
+          <a href="{{ resource.url | relative_url }}">Reviews and Metadata</a>
         </article>
       {% endfor %}
     </div>

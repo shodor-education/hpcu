@@ -25,5 +25,6 @@ plugins:
   - "jekyll-redirect-from"
 sass:
   style: "compressed"
+url: "https://shodor-education.github.io"
 whitelist:
   - "jekyll-redirect-from"
