@@ -5,21 +5,21 @@
     <legend>Filter type</legend>
     <input
       type="radio"
-      id="{{ heading-slug }}-or"
-      name="{{ heading-slug }}-filter-type"
-      value="OR"
-      onchange="selectBrowseOption();"
-      checked
-    />
-    <label for="{{ heading-slug }}-or">OR</label>
-    <input
-      type="radio"
       id="{{ heading-slug }}-and"
       name="{{ heading-slug }}-filter-type"
       value="AND"
       onchange="selectBrowseOption();"
+      checked
     />
     <label for="{{ heading-slug }}-and">AND</label>
+    <input
+      type="radio"
+      id="{{ heading-slug }}-or"
+      name="{{ heading-slug }}-filter-type"
+      value="OR"
+      onchange="selectBrowseOption();"
+    />
+    <label for="{{ heading-slug }}-or">OR</label>
   </fieldset>
   {% capture checkbox-group-name %}{{ heading-slug }}-options{% endcapture %}
   <div class="select-all-none">
