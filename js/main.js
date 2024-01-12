@@ -63,3 +63,12 @@ function selectBrowseOption() {
     );
   }
 }
+
+function setAllCheckboxes(checkboxGroupName, checked) {
+    const checkboxes = document.querySelectorAll(
+      "input[type='checkbox'][name='" + checkboxGroupName + "']"
+    );
+    for (let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = checked;
+    }
+}

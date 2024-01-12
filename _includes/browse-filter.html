@@ -21,8 +21,16 @@
     />
     <label for="{{ heading-slug }}-and">AND</label>
   </fieldset>
+  {% capture checkbox-group-name %}{{ heading-slug }}-options{% endcapture %}
+  <div class="select-all-none">
+    <button onclick="setAllCheckboxes('{{ checkbox-group-name }}', true);">
+        Select all
+    </button>
+    <button onclick="setAllCheckboxes('{{ checkbox-group-name }}', false);">
+        Select none
+    </button>
+  </div>
   <div class="options">
-    {% capture checkbox-group-name %}{{ heading-slug }}-options{% endcapture %}
     {% if include.tree %}
       {% include browse-filter-tree.html
         filter-key=heading-slug

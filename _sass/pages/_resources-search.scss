@@ -14,8 +14,12 @@
     .filter {
       margin: 10px 0 0 0;
 
+      .select-all-none {
+        margin-top: 10px;
+      }
+
       .options {
-        height: 92px;
+        height: 85px;
         margin-top: 10px;
         overflow-y: scroll;
 
@@ -54,7 +58,7 @@
 
     #results {
       border: 1px solid gray;
-      height: 2417px;
+      height: 2705px;
       margin-bottom: 10px;
       margin-top: 18px;
       overflow-y: scroll;
