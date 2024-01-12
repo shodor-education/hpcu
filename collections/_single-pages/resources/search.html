@@ -62,7 +62,7 @@ redirect_from: "/resources/"
   <section id="results-section">
     <h2 id="results-count">{{ site.resources | size | count }} results</h2>
     <div id="results">
-      {% for resource in site.resources %}
+      {% for resource in site.resources reversed %}
         <article
           class="resource"
           {% for filter-values in site.data.resource-filter-values %}
