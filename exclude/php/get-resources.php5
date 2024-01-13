@@ -88,5 +88,33 @@ while ($result = $results->fetch_assoc()) {
   echoMultiField('sector', 'Sector', $result['cserdId']);
   echoMultiField('difficulty', 'Difficulty', $result['cserdId']);
   echoField('address', 'Address', $result['cserdId']);
+  echo 'reviews:';
+  $query = <<<END
+    SELECT type, modified, cache, firstName, lastName
+    FROM review
+    JOIN user ON user.`userId` = review.`authorId`
+    WHERE review.`cserdId` = $result[cserdId]
+    AND review.`state` = 'published'
+    AND review.`active` = 1
+END;
+  $reviews = $cserdDbConn->query($query);
+  if ($reviews->num_rows == 0) {
+    echo ' null';
+  }
+  echo "\n";
+  while ($review = $reviews->fetch_assoc()) {
+    echo '  - type: ';
+    echoValue($review['type']);
+    echo "\n";
+    echo '    author: ';
+    echoValue("$review[firstName] $review[lastName]");
+    echo "\n";
+    echo '    modified: ';
+    echoValue($review['modified']);
+    echo "\n";
+    echo '    contents: ';
+    echoValue($review['cache']);
+    echo "\n";
+  }
   echo 'redirect_from: "/resources/' . $result['cserdId'] . "/\"\n---\n";
 }
