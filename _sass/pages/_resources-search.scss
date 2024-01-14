@@ -12,7 +12,35 @@
     width: 326px;
 
     .filter {
-      margin: 10px 0 0 0;
+      border-color: rgb(192, 192, 192);
+      border-image: initial;
+      border-style: groove;
+      border-width: 2px;
+      margin-inline-start: 2px;
+      margin-inline-end: 2px;
+      margin-top: 18px;
+      min-inline-size: min-content;
+      padding-block-start: 0.35em;
+      padding-block-end: 0.625em;
+      padding-inline-start: 0.75em;
+      padding-inline-end: 0.75em;
+      width: 298px;
+
+      .filter-summary {
+        cursor: pointer;
+        margin-left: -13px;
+        margin-top: -1em;
+
+        & > div {
+          background-color: white;
+          display: inline-block;
+          padding: 0 5px;
+        }
+      }
+
+      .filter-type {
+        margin-top: 5px;
+      }
 
       .select-all-none {
         margin-top: 10px;
@@ -22,6 +50,10 @@
         height: 85px;
         margin-top: 10px;
         overflow-y: scroll;
+
+        &.flat {
+          margin-left: 27px;
+        }
 
         .browse-filter-tree {
           list-style-type: none;
@@ -33,7 +65,7 @@
               margin-left: -16px;
 
               summary {
-                text-indent: -42px;
+                text-indent: -41px;
                 padding-left: 40px;
               }
             }
@@ -58,7 +90,7 @@
 
     #results {
       border: 1px solid gray;
-      height: 2705px;
+      height: 2693px;
       margin-top: 18px;
       overflow-y: scroll;
       word-wrap: break-word;

@@ -1,7 +1,9 @@
 {% assign heading-slug = include.heading | slugify %}
-<fieldset class="filter">
-  <legend>{{ include.heading }}</legend>
-  <fieldset>
+<details class="filter">
+  <summary class="filter-summary">
+    <div>{{ include.heading }}</div>
+  </summary>
+  <fieldset class="filter-type">
     <legend>Filter type</legend>
     <input
       type="radio"
@@ -30,14 +32,15 @@
         Select none
     </button>
   </div>
-  <div class="options">
-    {% if include.tree %}
+  {% if include.tree %}
+    <div class="options tree">
       {% include browse-filter-tree.html
         filter-key=heading-slug
         filter-values=include.options
         checkbox-group-name=checkbox-group-name
       %}
-    {% else %}
+  {% else %}
+    <div class="options flat">
       {% for option in include.options %}
         {% assign option-slug = option | slugify %}
         <div class="checkbox">
@@ -55,4 +58,4 @@
       {% endfor %}
     {% endif %}
   </div>
-</fieldset>
+</details>
