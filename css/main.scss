@@ -16,6 +16,7 @@ $page-width: 900px;
 $gray: {{ site.gray }};
 
 @import 'base';
+@import 'components/review-stars';
 @import 'layout/body';
 @import 'layout/footer';
 @import 'layout/header';

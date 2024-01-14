@@ -14,3 +14,51 @@
     }
   }
 }
+
+#reviews {
+  h2 {
+    font-size: 14pt;
+    margin: 10px 0;
+  }
+
+  article {
+    border: 1px solid gray;
+    margin-top: 5px;
+
+    * {
+      font-size: 11pt;
+    }
+
+    header {
+      background-color: $gray;
+      padding: 5px;
+
+      h3 {
+        margin: 0;
+      }
+
+      p {
+        color: gray;
+        margin: 0;
+
+        &.review-stars {
+          @extend .review-stars;
+        }
+      }
+    }
+
+    section {
+      padding: 5px;
+
+      * {
+        margin: 0;
+      }
+
+      &.usability-section {
+        * {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

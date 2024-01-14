@@ -27,3 +27,22 @@ layout: "default"
     </tr>
   {% endfor %}
 </table>
+<section id="reviews">
+  <h2>Reviews</h2>
+  {% for review in page.reviews %}
+    <article>
+      <header>
+        <h3>{{ review.type }} by {{ review.author }}</h3>
+        <p>Modified {{ review.modified | date: '%B %e, %Y' }}</p>
+        {% include review-stars.html num-stars=review.num-stars %}
+      </header>
+      <section>
+        <p>{{ review.contents.text }}</p>
+      </section>
+      <section class="usability-section">
+        <h4>Usability of the resource:</h4>
+        <p>{{ review.contents.usability }}</p>
+      </section>
+    </article>
+  {% endfor %}
+</section>

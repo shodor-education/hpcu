@@ -85,6 +85,19 @@ redirect_from: "/resources/"
           </h3>
           <p>{{ resource.description }}</p>
           <a href="{{ resource.url | relative_url }}">Reviews and Metadata</a>
+          {% assign num-reviews = resource.reviews | size %}
+          {% if num-reviews == 0 %}
+          {% else %}
+            {% assign num-stars = resource.reviews | map: 'num-stars' %}
+            {% assign total-num-stars = 0 %}
+            {% for star in num-stars %}
+              {% assign total-num-stars = total-num-stars | plus: star %}
+            {% endfor %}
+            {% assign average-num-stars = total-num-stars
+              | divided_by: num-reviews 
+            %}
+            {% include review-stars.html num-stars=average-num-stars %}
+          {% endif %}
         </article>
       {% endfor %}
     </div>

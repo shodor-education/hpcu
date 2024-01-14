@@ -1,0 +1,6 @@
+<p class="review-stars">
+  {% for star in (1..include.num-stars) %}
+    &starf;
+  {% endfor %}
+  ( {{ include.num-stars }} / 5 )
+</p>

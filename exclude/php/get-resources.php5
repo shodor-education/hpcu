@@ -90,12 +90,20 @@ while ($result = $results->fetch_assoc()) {
   echoField('address', 'Address', $result['cserdId']);
   echo 'reviews:';
   $query = <<<END
-    SELECT type, modified, cache, firstName, lastName
+    SELECT review.`type`,
+      review.`modified`,
+      review.`cache`,
+      user.`firstName`,
+      user.`lastName`,
+      (response.`response` + 1) AS 'numStars'
     FROM review
     JOIN user ON user.`userId` = review.`authorId`
+    JOIN response ON response.`reviewId` = review.`reviewId`
+    JOIN question ON question.`questionId` = response.`questionId`
     WHERE review.`cserdId` = $result[cserdId]
     AND review.`state` = 'published'
     AND review.`active` = 1
+    AND question.`ref` = 'usability'
 END;
   $reviews = $cserdDbConn->query($query);
   if ($reviews->num_rows == 0) {
@@ -112,9 +120,17 @@ END;
     echo '    modified: ';
     echoValue($review['modified']);
     echo "\n";
-    echo '    contents: ';
-    echoValue($review['cache']);
+    echo "    contents:\n";
+    $pieces = explode('</div><table', $review['cache']);
+    echo '      text: ';
+    echoValue(str_replace('<div class="reviewText">', '', $pieces[0]));
     echo "\n";
+    $pieces = explode('</td><td>', $pieces[1]);
+    $pieces = explode('</td>', $pieces[1]);
+    echo '      usability: ';
+    echoValue($pieces[0]);
+    echo "\n";
+    echo "    num-stars: $review[numStars]\n";
   }
   echo 'redirect_from: "/resources/' . $result['cserdId'] . "/\"\n---\n";
 }
