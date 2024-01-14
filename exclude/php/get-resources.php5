@@ -25,14 +25,26 @@ function echoValue($value) {
   echo '"' . str_replace('"', '\\"', $value) . '"';
 }
 
-function echoField($fieldDisplay, $fieldName, $cserdId) {
+function echoField(
+  $fieldDisplay,
+  $fieldName,
+  $cserdId,
+  $replacements = array()
+) {
   echo "$fieldDisplay: ";
   $values = getValues($fieldName, $cserdId);
   if ($values->num_rows == 0) {
     echo "null";
   } else {
-    $value = $values->fetch_assoc();
-    echoValue($value['entry']);
+    $result = $values->fetch_assoc();
+    $value = $result['entry'];
+    foreach ($replacements as $replacement) {
+      list($searches, $replace) = $replacement;
+      foreach ($searches as $search) {
+        $value = str_replace($search, $replace, $value);
+      }
+    }
+    echoValue($value);
   }
   echo "\n";
 }
@@ -66,7 +78,23 @@ while ($result = $results->fetch_assoc()) {
   echoField('title', 'Title', $result['cserdId']);
   echoField('start-date', 'Start_Date', $result['cserdId']);
   echoField('end-date', 'End_Date', $result['cserdId']);
-  echoField('resource-url', 'Url', $result['cserdId']);
+  $replacements = array(
+    array(
+      array(
+        'http://www.shodor.org/media/content//hpcu/website/resources/'
+      ),
+      'https://shodor-education.github.io/hpcu/media/'
+    ),
+    array (
+      array(
+        'http://hpcuniversity.org/',
+        'http://www.hpcuniversity.org/',
+        'http://hpcuniv.org/'
+      ),
+      'https://shodor-education.github.io/hpcu/',
+    )
+  );
+  echoField('resource-url', 'Url', $result['cserdId'], $replacements);
   echoField('description', 'Description', $result['cserdId']);
   echoMultiField('creator', 'Creator', $result['cserdId']);
   echoMultiField('contributor', 'Contributor', $result['cserdId']);
