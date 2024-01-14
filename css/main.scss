@@ -16,6 +16,7 @@ $page-width: 900px;
 $gray: {{ site.gray }};
 
 @import 'base';
+@import 'components/resource-table';
 @import 'components/review-stars';
 @import 'layout/body';
 @import 'layout/footer';
@@ -23,3 +24,4 @@ $gray: {{ site.gray }};
 @import 'layout/main';
 @import 'pages/resource';
 @import 'pages/resources-search';
+@import 'pages/training-materials';

@@ -1,0 +1,31 @@
+#resource-table {
+  margin-top: 10px;
+
+  th {
+    background-color: $gray;
+    text-align: right;
+  }
+
+  th, td {
+    padding: 5px;
+
+    .none {
+      font-style: italic;
+    }
+  }
+
+  .materials {
+    padding-left: 20px;
+    margin: 0;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

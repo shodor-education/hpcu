@@ -7,6 +7,9 @@ collections:
   single-pages:
     output: true
     permalink: "/:path/"
+  training-materials:
+    output: true
+    permalink: "/trainingMaterials/:path/"
 defaults:
   - scope:
       type: "resources"
@@ -16,6 +19,10 @@ defaults:
       type: "single-pages"
     values:
       layout: "default"
+  - scope:
+      type: "training-materials"
+    values:
+      layout: "training-materials"
 exclude:
   - "exclude"
 gray: "#f0f0f0"

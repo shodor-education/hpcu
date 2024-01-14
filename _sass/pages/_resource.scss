@@ -1,20 +1,3 @@
-#resource-table {
-  margin-top: 10px;
-
-  th {
-    background-color: $gray;
-    text-align: right;
-  }
-
-  th, td {
-    padding: 5px;
-
-    .none {
-      font-style: italic;
-    }
-  }
-}
-
 #reviews {
   h2 {
     font-size: 14pt;

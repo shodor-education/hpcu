@@ -1,3 +1,4 @@
+/* NOTE: This has been replaced by exclude/php/get-resources.php5 */
 SET SESSION group_concat_max_len = 1000000;
 SELECT CONCAT(
   'FILENAME::',
