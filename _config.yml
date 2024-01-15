@@ -28,6 +28,7 @@ exclude:
 gray: "#f0f0f0"
 # During dev, uncomment dirs below you don't need to generate — speeds up build
 #  - "_resources"
+#  - "_training-materials"
 plugins:
   - "jekyll-redirect-from"
 sass:

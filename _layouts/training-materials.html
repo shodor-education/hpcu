@@ -34,8 +34,9 @@ layout: "default"
               {% assign url = material.path %}
             {% else %}
               {% assign title = material.path | split: '/' | last %}
-              {% capture url %}{{
-                '/media/TrainingMaterials' | relative_url }}{{ material.path }}{%
+              {% capture url
+                %}https://shodor-education.github.io/hpcu-training-materials/{{
+                material.path }}{%
               endcapture %}
             {% endif %}
             <a
